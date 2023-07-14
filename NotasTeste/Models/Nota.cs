@@ -18,7 +18,6 @@ namespace NotasTeste.Models
 
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public string Filename { get; set; }
         public string Text { get; set; }
         public DateTime Date { get; set; }
         public async Task<Nota> CarregaNota()
@@ -38,13 +37,11 @@ namespace NotasTeste.Models
         }
         public async Task<int> SaveNotaAsync(Nota nota)
         {
- 
-                return await database.SaveItemAsync(nota);
+            return await database.SaveItemAsync(nota);
         }
 
         public async Task<int> DeleteNotaAsync(Nota nota)
         {
-
             return await database.DeleteItemAsync(nota);
         }
     }

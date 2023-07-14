@@ -19,8 +19,7 @@ public partial class PaginaTodasNotas : ContentPage
             ["Nota"] = new Nota()
         });
     }
-    private async void notesCollection_SelectionChanged(object sender,
-   SelectionChangedEventArgs e)
+    private async void notesCollection_SelectionChanged(object sender,SelectionChangedEventArgs e)
     {
         if (e.CurrentSelection.FirstOrDefault() is not Nota nota)
             return;

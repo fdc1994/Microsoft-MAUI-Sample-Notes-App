@@ -18,12 +18,12 @@ public partial class PaginaNotas : ContentPage
     public PaginaNotas()
 	{
 		InitializeComponent();
-        BindingContext = new Models.Nota();
+        BindingContext = new Nota();
     }
 
     protected override async void OnAppearing()
     {
-        await ((Models.Nota)BindingContext).CarregaNota();
+        await ((Nota)BindingContext).CarregaNota();
     }
 
     private async void SaveButton_Clicked(object sender, EventArgs e)
